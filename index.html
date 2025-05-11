@@ -8,7 +8,7 @@
 <body>
     <h1>Student Data</h1>
     <form action="">
-        <label for="key">key: <span id="key">abc123</span></label><br>
+        <label for="key">key: <span id="key">[NEW]</span></label><br>
         <label for="">name:</label><br>
         &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="firstname" name="firstname" placeholder="firstname"><br>
         &nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="lastname" name="lastname" placeholder="lastname"><br>
@@ -23,7 +23,9 @@
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="phy" id="phy" placeholder="phy"><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="chem" id="chem" placeholder="chem"><br>
         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" name="bio" id="bio" placeholder="bio"><br><br>
-        <button type="submit" id="submit">Submit</button>
+        <button type="submit" id="add-student">add-student</button>
     </form>
 </body>
+<script type="module" src="scripts/ui.js"></script>
+<script type="module" src="scripts/firebase.js"></script>
 </html>
