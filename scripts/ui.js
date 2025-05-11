@@ -1,28 +1,15 @@
 // ui.js
 // This file contains the UI logic for the application.
 
-import { pushDataToDB, updatePropertyInDB, deletePropertyInDB } from "./firebase.js";
-
-const keyElm = document.getElementById("key");
-const firstnameElm = document.getElementById("firstname");
-const lastnameElm = document.getElementById("lastname");
-const nicknameElm = document.getElementById("nickname");
-const ageElm = document.getElementById("age");
-const mathElm = document.getElementById("math");
-const sciElm = document.getElementById("sci");
-const engElm = document.getElementById("eng");
-const phyElm = document.getElementById("phy");
-const chemElm = document.getElementById("chem");
-const bioElm = document.getElementById("bio");
-const submitElm = document.getElementById("add-student");
+import { pushDataToDB, updatePropertyInDB, deletePropertyInDB, getValueOnce } from "./firebase.js";
 
 const sampleDataStrcture = {
     name: {
-        firstname: "adam",
-        lastname: "sandler",
-        nickname: "sandy",
+        firstname: "jeromy",
+        lastname: "mcguire",
+        nickname: "jerry",
     },
-    age: 60,
+    age: 37,
     education: {
         ol: {
             math: 10,
@@ -55,13 +42,15 @@ export function onValUiTrigger(data){
 // pushDataToDB(sampleDataStrcture);
 
 // update specific property in the database
-const pathRef = "studentData/-OQ-1thE-JC-Rgy9yT_W/education/al";
+const pathRef = "studentData/-OQ0OH9zGpeK86CVrKQQ/education/ol";
 const dataToUpdate = {
-    bio: 65
+    eng: 15
 };
 // updatePropertyInDB(pathRef, dataToUpdate);
 
 // delete specific property in the database
-const pathRefRemove = "studentData/-OPzks6N13StkghuC3xt";
+const pathRefRemove = "studentData/-OQ0-ZD_sGeMBccc4yt8";
 // deletePropertyInDB(pathRefRemove);
 
+// Get value of a node once.
+console.log("From ui.js: getValue()", getValueOnce('-OQ0OH9zGpeK86CVrKQQ/education'));
