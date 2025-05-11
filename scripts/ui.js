@@ -18,11 +18,11 @@ const submitElm = document.getElementById("add-student");
 
 const sampleDataStrcture = {
     name: {
-        firstname: "john",
-        lastname: "doe",
-        nickname: "johnny",
+        firstname: "adam",
+        lastname: "sandler",
+        nickname: "sandy",
     },
-    age: 40,
+    age: 60,
     education: {
         ol: {
             math: 10,
@@ -39,6 +39,18 @@ const sampleDataStrcture = {
 
 console.log("sampleDataStrcture", sampleDataStrcture);
 
+// Get entire database onValue()
+export function onValUiTrigger(data){
+    console.log("onValUiTrigger", data);
+    // loop through the data and console log the key and value
+    data.forEach((item) => {
+        const [key, value] = item;
+        console.log("key", key);
+        console.log("value", value);
+        console.log("firstname", value.name.firstname);
+    });
+}
+
 // push new data to the database
 // pushDataToDB(sampleDataStrcture);
 
@@ -52,3 +64,4 @@ const dataToUpdate = {
 // delete specific property in the database
 const pathRefRemove = "studentData/-OPzks6N13StkghuC3xt";
 // deletePropertyInDB(pathRefRemove);
+
