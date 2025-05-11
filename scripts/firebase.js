@@ -82,7 +82,12 @@ export async function getValueOnce(nodePath) {
 // getValueOnce('-OQ00JQyARTpn1_6RiYt/education/ol');
 // getValueOnce('-OQ00JQyARTpn1_6RiYt/education/ol/math');
 
-
+// For writing or replacing data at a specific location. It will overwrite any existing data at the specified reference. The value can be a string, number, boolean, object, or array.
+export function setNodeValue(nodePath, value){
+    const setNodePath = child(dbNodePath, nodePath);
+    const setValue = value;
+    set(setNodePath, setValue);
+}
 
 
 

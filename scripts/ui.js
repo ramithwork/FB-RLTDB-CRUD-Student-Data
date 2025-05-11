@@ -1,7 +1,7 @@
 // ui.js
 // This file contains the UI logic for the application.
 
-import { pushDataToDB, updatePropertyInDB, deletePropertyInDB, getValueOnce } from "./firebase.js";
+import { pushDataToDB, updatePropertyInDB, deletePropertyInDB, getValueOnce, setNodeValue } from "./firebase.js";
 
 const sampleDataStrcture = {
     name: {
@@ -54,3 +54,8 @@ const pathRefRemove = "studentData/-OQ0-ZD_sGeMBccc4yt8";
 
 // Get value of a node once.
 console.log("From ui.js: getValue()", getValueOnce('-OQ0OH9zGpeK86CVrKQQ/education'));
+
+// Set the value of a specified node.
+const setNodePath = '-OQ0OH9zGpeK86CVrKQQ/education/al/chem'
+const setValue = 59;
+// setNodeValue(setNodePath, setValue);
