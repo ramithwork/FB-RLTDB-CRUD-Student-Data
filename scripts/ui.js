@@ -1,7 +1,7 @@
 // ui.js
 // This file contains the UI logic for the application.
 
-import { pushDataToDB, updatePropertyInDB, deletePropertyInDB, getValueOnce, setNodeValue } from "./firebase.js";
+import { pushDataToDB, updatePropertyInDB, deletePropertyInDB, getValueOnce, setNodeValue } from "./firebase-rltdb.js";
 
 const sampleDataStrcture = {
     name: {

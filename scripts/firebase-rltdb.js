@@ -1,5 +1,5 @@
-// firebase.js
-// This file contains the common Firebase logic for most apps. 
+// firebase-rltdb.js
+// Firebase RLTDB CRUD module. 
 
 // Note: Change this URL to match the project DB URL.
 // databaseURL: "https://student-data-5d702-default-rtdb.asia-southeast1.firebasedatabase.app/"
